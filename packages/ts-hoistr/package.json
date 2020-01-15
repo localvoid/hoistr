@@ -1,0 +1,42 @@
+{
+  "name": "ts-hoistr",
+  "version": "0.1.0",
+  "main": "dist/main/index.js",
+  "typings": "dist/typings/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src",
+    "!dist/**/*.tsbuildinfo",
+    "!src/**/__tests__",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run clean && npm run dist",
+    "clean": "rm -rf ./dist",
+    "dist": "../../node_modules/.bin/tsc -p ./tsconfig.json",
+    "watch": "../../node_modules/.bin/tsc -p ./tsconfig.json -w"
+  },
+  "description": "TypeScript transformer for hoisting expressions to the module scope",
+  "license": "MIT",
+  "author": {
+    "name": "Boris Kaul",
+    "email": "localvoid@gmail.com",
+    "url": "https://github.com/localvoid"
+  },
+  "keywords": [
+    "typescript",
+    "transformer",
+    "hoist"
+  ],
+  "homepage": "https://github.com/localvoid/hoistr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/localvoid/hoistr"
+  },
+  "bugs": {
+    "url": "https://github.com/localvoid/hoistr/issues"
+  },
+  "github": "https://github.com/localvoid/hoistr"
+}

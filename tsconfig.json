@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.checks.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2018",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "paths": {
+      "hoistr": [
+        "packages/hoistr/src"
+      ],
+      "ts-hoistr": [
+        "packages/ts-hoistr/src"
+      ]
+    }
+  },
+  "include": [
+    "packages/*/src/**/*.ts"
+  ]
+}
